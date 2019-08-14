@@ -32,7 +32,6 @@
 	</properties>
 
 	<dependencies>
-
 		<!-- test dependencies -->
 		<dependency>
 			<groupId>junit</groupId>
