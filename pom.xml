@@ -88,14 +88,14 @@
 
 	</dependencies>
 	
-	<repositories>
+	<!-- <repositories>
 		<repository>
 			<id>nexus</id> 
 			<url>http://35.154.253.71:8081/repository/flipkart-dev-proxy/</url>
 			<releases><enabled>true</enabled></releases>
 			<snapshots><enabled>true</enabled></snapshots>
 		</repository>
-	</repositories>
+	</repositories> -->
 	
 	
 	
