@@ -111,7 +111,7 @@
 	      <url>http://ec2-52-66-205-253.ap-south-1.compute.amazonaws.com:8081/repository/flipkart-snapshot/</url>
 	    </snapshotRepository>
 	</distributionManagement>
-	
+
 	<build>
 		<finalName>maven-web-application</finalName>
 		<plugins>
