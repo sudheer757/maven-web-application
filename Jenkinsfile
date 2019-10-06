@@ -4,24 +4,23 @@ node('flipkart-node')
   //http://localhost:8080/pipeline-syntax/globals#currentBuild
   //Getting the  env  global varibale values
  
-  echo "GitHub BranhName ${env.BRANCH_NAME}"
+/*  echo "GitHub BranhName ${env.BRANCH_NAME}"
   echo "Jenkins Job Number ${env.BUILD_NUMBER}"
   echo "Jenkins Node Name ${env.NODE_NAME}"
   
   echo "Jenkins Home ${env.JENKINS_HOME}"
   echo "Jenkins URL ${env.JENKINS_URL}"
   echo "JOB Name ${env.JOB_NAME}"
-
+*/
   def MavenHome = tool name: 'Maven3.6.1', type:'maven'
   
-   properties([
+ /*  properties([
        buildDiscarder(logRotator(numToKeepStr: '3')),
        pipelineTriggers([
            pollSCM('* * * * *')
        ])
    ])
-   
-        /*
+   */
         stage('CheckoutCode'){
         git branch: 'development', credentialsId: '2587140f-2970-4f0e-aac3-62624e3d9682', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
         }
@@ -32,7 +31,7 @@ node('flipkart-node')
            sh "${MavenHome}/bin/mvn clean package"
         }
         
-        stage('ExecuteSonarQubeReport'){
+       /* stage('ExecuteSonarQubeReport'){
             sh "${MavenHome}/bin/mvn sonar:sonar"
         }
         
@@ -46,7 +45,7 @@ node('flipkart-node')
          sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.233.149.177:/opt/apache-tomcat-9.0.22/webapps/maven-web-application.war"
 	    }
          }
-          */
+          
      stage('EmailNotification'){
          emailext body: '''Build is over
          Please check the logs...
@@ -56,6 +55,6 @@ node('flipkart-node')
          Bangalore.
          ''', subject: 'Build done', to: 'devopstrainingblr@gmail.com'
          
-         }
+         } */
 
 }
