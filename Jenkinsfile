@@ -12,7 +12,7 @@ node()
   echo "Jenkins URL ${env.JENKINS_URL}"
   echo "JOB Name ${env.JOB_NAME}"
 */
-  def MavenHome = tool name: 'Maven3.6.1', type:'maven'
+  def MavenHome = tool name: 'maven3.6.1', type:'maven'
   
  /*  properties([
        buildDiscarder(logRotator(numToKeepStr: '3')),
