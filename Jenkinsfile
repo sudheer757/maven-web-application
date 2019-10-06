@@ -1,4 +1,4 @@
-node('flipkart-node')
+node()
 {
 
   //http://localhost:8080/pipeline-syntax/globals#currentBuild
