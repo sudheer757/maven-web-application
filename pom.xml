@@ -88,14 +88,14 @@
 
 	</dependencies>
 	
-	<repositories>
+<!--	<repositories>
 		<repository>
 			<id>nexus</id> 
 			<url>http://ec2-52-66-205-253.ap-south-1.compute.amazonaws.com:8081/repository/flipkart-proxy/</url>
 			<releases><enabled>true</enabled></releases>
 			<snapshots><enabled>true</enabled></snapshots>
 		</repository>
-	</repositories> 
+	</repositories> -->
 	
 	
 	
