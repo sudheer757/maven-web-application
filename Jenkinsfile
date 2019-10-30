@@ -4,14 +4,14 @@ node()
   //http://localhost:8080/pipeline-syntax/globals#currentBuild
   //Getting the  env  global varibale values
  
-/*  echo "GitHub BranhName ${env.BRANCH_NAME}"
-  echo "Jenkins Job Number ${env.BUILD_NUMBER}"
-  echo "Jenkins Node Name ${env.NODE_NAME}"
+//  echo "GitHub BranhName ${env.BRANCH_NAME}"
+ // echo "Jenkins Job Number ${env.BUILD_NUMBER}"
+//  echo "Jenkins Node Name ${env.NODE_NAME}"
   
-  echo "Jenkins Home ${env.JENKINS_HOME}"
-  echo "Jenkins URL ${env.JENKINS_URL}"
-  echo "JOB Name ${env.JOB_NAME}"
-*/
+//  echo "Jenkins Home ${env.JENKINS_HOME}"
+//  echo "Jenkins URL ${env.JENKINS_URL}"
+ // echo "JOB Name ${env.JOB_NAME}"
+
   def MavenHome = tool name: 'maven3.6.1', type:'maven'
   
  /*  properties([
@@ -30,7 +30,9 @@ node()
         {
            sh "${MavenHome}/bin/mvn clean package"
         }
-        
+	stage('docker build'){
+	sh "docker build -t sudheer757/image:2 ."
+	}
        /* stage('ExecuteSonarQubeReport'){
             sh "${MavenHome}/bin/mvn sonar:sonar"
         }
