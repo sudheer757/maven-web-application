@@ -31,6 +31,7 @@ node()
            sh "${MavenHome}/bin/mvn clean package"
         }
 	stage('docker build'){
+	sh "docker login -u sudheer757 -p passwordpassword"
 	sh "docker build -t sudheer757/image:2 ."
 	}
        /* stage('ExecuteSonarQubeReport'){
