@@ -1,4 +1,4 @@
-node('master')
+node('label')
 {
 
   //http://localhost:8080/pipeline-syntax/globals#currentBuild
