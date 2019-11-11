@@ -1,4 +1,3 @@
-properties([parameters([choice(choices: ['master', 'development', 'stage', 'test'], description: 'build starts', name: 'branch')])])
 node()
 {
 
