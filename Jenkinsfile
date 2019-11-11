@@ -13,7 +13,7 @@ node()
  // echo "JOB Name ${env.JOB_NAME}"
 
   def MavenHome = tool name: 'maven3.6.1', type:'maven'
-  properties([parameters([choice(choices: ['master', 'dev', 'stage'], description: 'build starts', name: 'branch')])])  
+  properties([parameters([choice(choices: ['master', 'development', 'stage', 'test'], description: 'build starts', name: 'branch')])])
  /*  properties([
        buildDiscarder(logRotator(numToKeepStr: '3')),
        pipelineTriggers([
