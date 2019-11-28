@@ -27,7 +27,7 @@ node()
         
         stage('Build')
         {
-           sh "${MavenHome}/bin/mvn clean package"
+           sh "${MavenHome}/bin/mvn clean"
         }
 	/*stage('docker build'){
 	sh "docker login -u sudheer757 -p passwordpassword"
