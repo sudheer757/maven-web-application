@@ -1,6 +1,9 @@
 node()
 {
-   cleanWs notFailBuild: true
+  timestamps {
+    // some block
+     }
+ cleanWs notFailBuild: true
   //http://localhost:8080/pipeline-syntax/globals#currentBuild
   //Getting the  env  global varibale values
  
